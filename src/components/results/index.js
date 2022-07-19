@@ -1,12 +1,12 @@
-import React from 'react';
+// import React from 'react';
 
 import './results.scss';
 
 const Results = (props) => {
-  const { data } = props;
+  // const { data } = props;
   return (
     <section>
-      <pre>{data ? JSON.stringify(data, undefined, 2) : null}</pre>
+      <pre>{props.data ? JSON.stringify(props.data, undefined, 2) : null}</pre>
     </section>
   );
 }
