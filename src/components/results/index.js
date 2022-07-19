@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './results.scss';
 
 const Results = (props) => {
   const { data } = props;

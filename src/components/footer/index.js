@@ -1,9 +1,10 @@
 import React from 'react';
+import './footer.scss';
 
 const Footer = () => {
 
   return (
-    <footer>&copy; 2018</footer>
+    <footer>&copy; 2022</footer>
   );
 }
 

@@ -1,10 +1,28 @@
-$backgroundColor: #efefef;
+$backgroundColor: grey;
 $radius: 40%;
 
+#get {
+  color: blue;
+}
+
+#post {
+  color: green;
+}
+
+#put {
+  color: yellow;
+}
+
+#delete {
+  color: red;
+}
+
 form {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
   display: inline-block;
   margin: auto;
-  width: 200px;
+  // width: 200px;
 
   label {
     display: flex;
@@ -15,10 +33,10 @@ form {
         cursor: pointer;
         margin-right: 1rem;
         padding: .25rem .5rem;
-        background: #ccc;
+        background: rgb(150, 150, 150);
 
         &:hover, &.active {
-          background: #fff;
+          background: darkgrey;
         }
       }
     }
