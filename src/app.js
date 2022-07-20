@@ -1,25 +1,19 @@
-import React from 'react';
+// import React from 'react';
+import { useState } from 'react';
 
 import './app.scss';
 
-// Let's talk about using index.js and some other name in the component folder
-// There's pros and cons for each way of doing this ...
 import Header from './components/header';
 import Footer from './components/footer';
 import Form from './components/form';
 import Results from './components/results';
 
-class App extends React.Component {
+const App = () => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: null,
-      requestParams: {},
-    };
-  }
+  const [data, setData] = useState(null);
+  const [requestParams, setRequestParams] = useState({});
 
-  callApi = (requestParams) => {
+  const callAPI = (requestParams) => {
     // mock output
     const data = {
       count: 2,
@@ -28,21 +22,20 @@ class App extends React.Component {
         {name: 'fake thing 2', url: 'http://fakethings.com/2'},
       ],
     };
-    this.setState({data, requestParams});
+    setData({ data });
+    setRequestParams({ requestParams });
   }
 
-  render() {
     return (
-      <React.Fragment>
+      <>
         <Header />
-        <div>Request Method: {this.state.requestParams.method}</div>
-        <div>URL: {this.state.requestParams.url}</div>
-        <Form handleApiCall={this.callApi} />
-        <Results data={this.state.data} />
+        <div>Request Method: {requestParams.method}</div>
+        <div>URL: {requestParams.url}</div>
+        <Form handleAPICall={callAPI} />
+        <Results data={data} />
         <Footer />
-      </React.Fragment>
+      </>
     );
-  }
-}
+};
 
 export default App;
