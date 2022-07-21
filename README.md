@@ -2,7 +2,7 @@
 
 > ## Problem Domain
 
-Stage 1 of the RESTy API app: Convert the child components of `App.js` from classes into functions, and style them using Sass.
+Stage 3 of the RESTy API app: HTTP method (GET, etc) dynamically adjusts in state and re-sends, all based on effect hooks.
 
 > ## UML
 
@@ -16,7 +16,7 @@ Stage 1 of the RESTy API app: Convert the child components of `App.js` from clas
 
 > ## Links
 
-- [GitHub pull request](https://github.com/schillerandrew/resty/pull/2)
+- [GitHub pull request](https://github.com/schillerandrew/resty/pull/5)
 
 > ## Architecture (front-end)
 
