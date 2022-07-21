@@ -1,5 +1,6 @@
 // import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import './app.scss';
 
@@ -10,29 +11,40 @@ import Results from './components/results';
 
 const App = () => {
 
-  const [data, setData] = useState(null);
+  const [results, setResults] = useState(null);
   const [requestParams, setRequestParams] = useState({});
+  const [method, setMethod] = useState(null);
+  const [url, setUrl] = useState(null);
 
-  const callAPI = (requestParams) => {
+
+// useEffect(() => {
+//   axios[method](url);
+// }, []);
+
+  const callAPI = async (requestParams) => {
+
+    let response = await axios.get(requestParams.url);
+    setResults(response.data.results);
+    setRequestParams(requestParams);
     // mock output
-    const data = {
-      count: 2,
-      results: [
-        {name: 'fake thing 1', url: 'http://fakethings.com/1'},
-        {name: 'fake thing 2', url: 'http://fakethings.com/2'},
-      ],
-    };
-    setData({ data });
-    setRequestParams({ requestParams });
+    // const data = {
+    //   count: 2,
+    //   results: [
+    //     {name: 'fake thing 1', url: 'http://fakethings.com/1'},
+    //     {name: 'fake thing 2', url: 'http://fakethings.com/2'},
+    //   ],
+    // };
+    // setResults(results);
+    // setRequestParams(requestParams);
   }
 
     return (
       <>
         <Header />
-        <div>Request Method: {requestParams.method}</div>
-        <div>URL: {requestParams.url}</div>
+        <div><b>Request Method:</b> {requestParams.method}</div>
+        <div><b>URL:</b> {requestParams.url}</div>
         <Form handleAPICall={callAPI} />
-        <Results data={data} />
+        <Results results={results} />
         <Footer />
       </>
     );
