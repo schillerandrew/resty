@@ -10,7 +10,7 @@ const Form = (props) => {
       method: 'GET',
       url: 'https://pokeapi.co/api/v2/pokemon',
     };
-    props.handleApiCall(formData);
+    props.handleAPICall(formData);
   }
 
   return (
