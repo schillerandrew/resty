@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 import './form.scss';
 
@@ -10,13 +10,13 @@ const Form = (props) => {
       method: 'GET',
       url: 'https://pokeapi.co/api/v2/pokemon',
     };
-    props.handleApiCall(formData);
+    props.handleAPICall(formData);
   }
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label >
+        <label>
           <span>URL: </span>
           <input name='url' type='text' />
           <button type="submit">GO!</button>
