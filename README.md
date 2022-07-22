@@ -2,7 +2,7 @@
 
 > ## Problem Domain
 
-Stage 2 of the RESTy API app: Refactor any components using `this.setState` to using `useState` hooks instead. Refactor the Form component to use genuine REST methods -- GET, POST and PUT -- and real data from APIs.
+Stage 4 of the RESTy API app: All REST request types and response data are stored via useReducer, for easy rendering of user's history of REST requests.
 
 > ## UML
 
@@ -16,7 +16,7 @@ Stage 2 of the RESTy API app: Refactor any components using `this.setState` to u
 
 > ## Links
 
-- [GitHub pull request](https://github.com/schillerandrew/resty/pull/3)
+- [GitHub pull request](https://github.com/schillerandrew/resty/pull/6)
 
 > ## Architecture (front-end)
 
